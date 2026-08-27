@@ -1152,3 +1152,349 @@ body,
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================
+   Hero Layout
+   ========================================================== */
+
+.hero {
+    min-height: calc(100vh - 75px);
+
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    align-items: center;
+
+    gap: 4rem;
+
+    padding: 5rem 6vw;
+
+    position: relative;
+}
+
+.hero__inner {
+    max-width: 760px;
+
+    animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero__title {
+    font-size: clamp(2.6rem, 5vw, 4.5rem);
+
+    margin-bottom: 1.5rem;
+
+    letter-spacing: -0.04em;
+}
+
+.hero__title .highlight {
+    color: var(--primary);
+}
+
+.hero__subtitle {
+    max-width: 52ch;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 2rem;
+}
+
+
+/* Hero Technologies */
+
+.hero__tech {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.6rem;
+
+    margin-top: 2rem;
+}
+
+.hero__tech span {
+    padding: 0.4rem 0.75rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: 999px;
+
+    color: var(--muted);
+
+    font-size: 0.72rem;
+    font-weight: 500;
+
+    transition:
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+.hero__tech span:hover {
+    color: var(--primary);
+
+    border-color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   Hero Visual Card
+   ========================================================== */
+
+.hero__visual {
+    display: flex;
+    justify-content: flex-end;
+
+    animation: heroCardRise 1s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-card {
+    width: min(100%, 380px);
+
+    padding: 1.75rem;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 70px -35px rgba(37, 99, 235, 0.35);
+
+    transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 30px 80px -35px rgba(37, 99, 235, 0.5);
+}
+
+
+/* Top */
+
+.hero-card__top {
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    padding-bottom: 1.25rem;
+
+    border-bottom: 1px solid var(--border);
+
+    color: var(--muted);
+
+    font-size: 0.7rem;
+}
+
+.hero-card__dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 0 0 4px var(--accent);
+}
+
+
+/* Main */
+
+.hero-card__main {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.75rem 0;
+}
+
+.hero-card__avatar {
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 16px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px -10px rgba(37, 99, 235, 0.6);
+}
+
+.hero-card__main h2 {
+    margin: 0 0 0.25rem;
+
+    font-size: 1.25rem;
+}
+
+.hero-card__main p {
+    margin: 0;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+}
+
+
+/* Stats */
+
+.hero-card__stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 0.75rem;
+
+    padding: 1rem 0;
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-card__stats div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.2rem;
+}
+
+.hero-card__stats strong {
+    font-size: 1.05rem;
+
+    color: var(--primary);
+}
+
+.hero-card__stats span {
+    color: var(--muted);
+
+    font-size: 0.65rem;
+}
+
+
+/* Code block */
+
+.hero-card__code {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    margin-top: 1.25rem;
+
+    padding: 1rem;
+
+    border-radius: 10px;
+
+    background: var(--accent);
+}
+
+.hero-card__code>span {
+    font-family: monospace;
+
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    color: var(--primary);
+}
+
+.hero-card__code p {
+    margin: 0;
+
+    color: var(--text);
+
+    font-size: 0.72rem;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   Hero Animation
+   ========================================================== */
+
+@keyframes heroCardRise {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* ==========================================================
+   Hero Responsive
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        padding-top: 4rem;
+        padding-bottom: 6rem;
+    }
+
+    .hero__visual {
+        justify-content: flex-start;
+    }
+
+    .hero-card {
+        max-width: 500px;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 4rem;
+    }
+
+    .hero__title {
+        font-size: clamp(2.3rem, 11vw, 3.2rem);
+    }
+
+    .hero__subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-card {
+        padding: 1.4rem;
+    }
+
+}
