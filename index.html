@@ -7,6 +7,9 @@
 
     <title>Sevinc — Frontend Developer</title>
 
+    <meta name="description"
+        content="Sevinc's portfolio — Frontend Developer building modern, responsive, and user-friendly web experiences.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -17,11 +20,15 @@
 
 <body>
 
+    <!-- Scroll Progress -->
     <div class="progress-track">
         <div class="progress-fill" id="progressFill"></div>
     </div>
 
+
+    <!-- Navigation -->
     <header class="nav" id="nav">
+
         <a href="#hero" class="nav__logo">S.</a>
 
         <nav class="nav__links" id="navLinks">
@@ -33,6 +40,7 @@
         </nav>
 
         <div class="nav__actions">
+
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
                 <span class="theme-toggle__icon">☾</span>
             </button>
@@ -42,12 +50,17 @@
                 <span></span>
                 <span></span>
             </button>
-            </div>
-        </header>
 
-        <main>
+        </div>
 
+    </header>
+
+
+    <main>
+
+        <!-- Hero -->
         <section id="hero" class="hero">
+
             <div class="hero__inner">
 
                 <p class="eyebrow">Frontend Developer</p>
@@ -66,6 +79,7 @@
                 </p>
 
                 <div class="hero__actions">
+
                     <a href="#projects" class="btn btn--primary">
                         View My Work
                     </a>
@@ -73,6 +87,7 @@
                     <a href="#contact" class="btn btn--ghost">
                         Get in Touch
                     </a>
+
                 </div>
 
             </div>
@@ -81,9 +96,11 @@
                 <span>Scroll</span>
                 <div class="hero__scroll-line"></div>
             </div>
+
         </section>
 
 
+        <!-- About -->
         <section id="about" class="section reveal">
 
             <div class="section__head">
@@ -129,6 +146,7 @@
         </section>
 
 
+        <!-- Skills -->
         <section id="skills" class="section reveal">
 
             <div class="section__head">
@@ -140,42 +158,66 @@
 
                 <div class="skill-card">
                     <h3>HTML5</h3>
-                    <p>Semantic and accessible markup for structured web pages.</p>
+                    <p>
+                        Semantic and accessible markup for structured
+                        web pages.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>CSS3</h3>
-                    <p>Responsive layouts, styling, animations, and modern UI design.</p>
+                    <p>
+                        Responsive layouts, styling, animations,
+                        and modern UI design.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>JavaScript</h3>
-                    <p>Interactive interfaces, DOM manipulation, and application logic.</p>
+                    <p>
+                        Interactive interfaces, DOM manipulation,
+                        and application logic.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Tailwind CSS</h3>
-                    <p>Building responsive and consistent interfaces with utility classes.</p>
+                    <p>
+                        Building responsive and consistent interfaces
+                        with utility classes.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>React.js</h3>
-                    <p>Creating reusable components and interactive user interfaces.</p>
+                    <p>
+                        Creating reusable components and interactive
+                        user interfaces.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Next.js</h3>
-                    <p>Building modern React applications with Next.js.</p>
+                    <p>
+                        Building modern React applications with
+                        Next.js.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>TypeScript</h3>
-                    <p>Writing safer and more maintainable JavaScript applications.</p>
+                    <p>
+                        Writing safer and more maintainable
+                        JavaScript applications.
+                    </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Git & GitHub</h3>
-                    <p>Version control, collaboration, and organized project development.</p>
+                    <p>
+                        Version control, collaboration, and organized
+                        project development.
+                    </p>
                 </div>
 
             </div>
@@ -183,96 +225,129 @@
         </section>
 
 
+        <!-- Projects -->
         <section id="projects" class="section reveal">
 
             <div class="section__head">
                 <p class="eyebrow">Projects</p>
-                <h2>Selected work</h2>
+                <h2>Things I've built</h2>
             </div>
 
             <div class="projects__grid">
 
+                <!-- StudyPilot -->
                 <article class="project-card">
+
                     <span class="project-card__index">01</span>
 
-                    <h3>StudyPilot</h3>
+                    <div class="project-card__content">
 
-                    <p>
-                        An AI-powered study planner designed to help students
-                        organize their study tasks, deadlines, and progress.
-                    </p>
+                        <h3>StudyPilot</h3>
 
-                    <div class="project-card__tags">
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>Tailwind</span>
+                        <p>
+                            An AI-powered study planner that helps students
+                            organize study tasks, deadlines, and progress
+                            in one place.
+                        </p>
+
+                        <div class="project-card__tags">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Tailwind CSS</span>
+                            <span>Supabase</span>
+                        </div>
+
                     </div>
 
                     <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener">
+
+                        <a href="https://studypilot-coral.vercel.app/" target="_blank" rel="noopener noreferrer">
                             Live Demo →
                         </a>
 
-                        <a href="#" target="_blank" rel="noopener">
-                            Source
+                        <a href="https://github.com/sevincyunusova/studypilot" target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub
                         </a>
+
                     </div>
+
                 </article>
 
 
+                <!-- SwiftMove -->
                 <article class="project-card">
+
                     <span class="project-card__index">02</span>
 
-                    <h3>SwiftMove</h3>
+                    <div class="project-card__content">
 
-                    <p>
-                        A responsive transportation website built with
-                        modern frontend techniques and interactive JavaScript features.
-                    </p>
+                        <h3>SwiftMove</h3>
 
-                    <div class="project-card__tags">
-                        <span>HTML</span>
-                        <span>Tailwind CSS</span>
-                        <span>JavaScript</span>
+                        <p>
+                            A responsive transportation website with
+                            interactive sections, dynamic counters,
+                            FAQ accordion, and modern UI.
+                        </p>
+
+                        <div class="project-card__tags">
+                            <span>HTML</span>
+                            <span>Tailwind CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
                     </div>
 
                     <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener">
+
+                        <a href="#" target="_blank" rel="noopener noreferrer">
                             Live Demo →
                         </a>
 
-                        <a href="#" target="_blank" rel="noopener">
-                            Source
+                        <a href="#" target="_blank" rel="noopener noreferrer">
+                            GitHub
                         </a>
+
                     </div>
+
                 </article>
 
 
+                <!-- Frontend Projects -->
                 <article class="project-card">
+
                     <span class="project-card__index">03</span>
 
-                    <h3>Frontend Projects</h3>
+                    <div class="project-card__content">
 
-                    <p>
-                        A collection of frontend projects built while developing
-                        practical skills in modern web development.
-                    </p>
+                        <h3>Frontend Projects</h3>
 
-                    <div class="project-card__tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
+                        <p>
+                            A collection of frontend projects created to
+                            practice responsive design, JavaScript
+                            functionality, and UI development.
+                        </p>
+
+                        <div class="project-card__tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
                     </div>
 
                     <div class="project-card__links">
-                        <a href="#" target="_blank" rel="noopener">
+
+                        <a href="https://github.com/sevincyunusova" target="_blank" rel="noopener noreferrer">
                             View Projects →
                         </a>
 
-                        <a href="#" target="_blank" rel="noopener">
+                        <a href="https://github.com/sevincyunusova" target="_blank" rel="noopener noreferrer">
                             GitHub
                         </a>
+
                     </div>
+
                 </article>
 
             </div>
@@ -280,6 +355,7 @@
         </section>
 
 
+        <!-- Experience -->
         <section id="experience" class="section reveal">
 
             <div class="section__head">
@@ -292,14 +368,36 @@
                 <div class="timeline__item">
 
                     <p class="timeline__date">
-                        2026
+                        Aug 2026 — Sep 2026
                     </p>
 
-                    <h3>Frontend Developer Intern — CodeAlpha</h3>
+                    <h3>
+                        Frontend Developer Intern — CodeAlpha
+                    </h3>
 
                     <p>
-                        Working on frontend development tasks and building
-                        practical experience through real-world projects.
+                        Working on frontend development tasks and gaining
+                        practical experience through real-world projects
+                        and development workflows.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline__item">
+
+                    <p class="timeline__date">
+                        Jul 2026
+                    </p>
+
+                    <h3>
+                        Front-end AI Engineering — FlyRank
+                    </h3>
+
+                    <p>
+                        Participating in a practical engineering program
+                        focused on frontend development and AI-related
+                        technologies.
                     </p>
 
                 </div>
@@ -311,27 +409,14 @@
                         2026
                     </p>
 
-                    <h3>Front-end AI Engineering — FlyRank</h3>
+                    <h3>
+                        Frontend Development — Jet Academy
+                    </h3>
 
                     <p>
-                        Developing frontend and AI-related skills through
-                        practical engineering experience.
-                    </p>
-
-                </div>
-
-
-                <div class="timeline__item">
-
-                    <p class="timeline__date">
-                        2026
-                    </p>
-
-                    <h3>Frontend Development — Jet Academy</h3>
-
-                    <p>
-                        Developing practical frontend skills with HTML, CSS,
-                        JavaScript, React, Next.js, TypeScript, and related tools.
+                        Developing practical frontend skills with HTML,
+                        CSS, JavaScript, React, Next.js, TypeScript,
+                        and modern development tools.
                     </p>
 
                 </div>
@@ -341,6 +426,7 @@
         </section>
 
 
+        <!-- Contact -->
         <section id="contact" class="section reveal">
 
             <div class="section__head">
@@ -361,6 +447,7 @@
 
                         <li>
                             <span>Email</span>
+
                             <a href="mailto:your-email@example.com">
                                 your-email@example.com
                             </a>
@@ -368,15 +455,17 @@
 
                         <li>
                             <span>GitHub</span>
-                            <a href="#" target="_blank" rel="noopener">
-                                GitHub
+
+                            <a href="https://github.com/sevincyunusova" target="_blank" rel="noopener noreferrer">
+                                github.com/sevincyunusova
                             </a>
                         </li>
 
                         <li>
                             <span>LinkedIn</span>
-                            <a href="#" target="_blank" rel="noopener">
-                                LinkedIn
+
+                            <a href="#" target="_blank" rel="noopener noreferrer">
+                                LinkedIn Profile
                             </a>
                         </li>
 
@@ -389,24 +478,27 @@
 
                     <label>
                         Name
-                        <input type="text" name="name" required>
+
+                        <input type="text" name="name" autocomplete="name" required>
                     </label>
 
                     <label>
                         Email
-                        <input type="email" name="email" required>
+
+                        <input type="email" name="email" autocomplete="email" required>
                     </label>
 
                     <label>
                         Message
-                        <textarea name="message" rows="4" required></textarea>
+
+                        <textarea name="message" rows="5" required></textarea>
                     </label>
 
                     <button type="submit" class="btn btn--primary">
                         Send Message
                     </button>
 
-                    <p class="contact__status" id="formStatus"></p>
+                    <p class="contact__status" id="formStatus" aria-live="polite"></p>
 
                 </form>
 
@@ -416,10 +508,14 @@
 
     </main>
 
+
+    <!-- Footer -->
     <footer class="footer">
+
         <p>
             © 2026 Sevinc. Built with HTML, CSS & JavaScript.
         </p>
+
     </footer>
 
 
