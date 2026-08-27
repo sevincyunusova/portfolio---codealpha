@@ -437,19 +437,15 @@ h3 {
 
     font-size: 0.84rem;
 }
-
 /* ==========================================================
    Projects
    ========================================================== */
 
 .projects__grid {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 1.25rem;
 }
-
 
 .project-card {
     position: relative;
@@ -458,13 +454,10 @@ h3 {
     flex-direction: column;
 
     min-height: 350px;
-
     padding: 1.75rem;
 
     background: var(--surface);
-
     border: 1px solid var(--border);
-
     border-radius: var(--radius);
 
     overflow: hidden;
@@ -476,12 +469,10 @@ h3 {
         box-shadow var(--transition);
 }
 
-
 .project-card::before {
     content: '';
 
     position: absolute;
-
     top: 0;
     left: 0;
 
@@ -491,12 +482,10 @@ h3 {
     background: var(--primary);
 
     transform: scaleX(0);
-
     transform-origin: left;
 
     transition: transform var(--transition);
 }
-
 
 .project-card:hover {
     transform: translateY(-7px);
@@ -509,13 +498,14 @@ h3 {
         0 25px 55px -30px rgba(37, 99, 235, 0.45);
 }
 
-
 .project-card:hover::before {
     transform: scaleX(1);
 }
 
 
-/* Featured project */
+/* ==========================================================
+   Featured Project
+   ========================================================== */
 
 .project-card--featured {
     grid-column: span 2;
@@ -523,11 +513,12 @@ h3 {
     min-height: 320px;
 
     background:
-        linear-gradient(135deg,
+        linear-gradient(
+            135deg,
             var(--surface),
-            var(--surface-2));
+            var(--surface-2)
+        );
 }
-
 
 .project-card--featured::after {
     content: '';
@@ -551,45 +542,38 @@ h3 {
         opacity var(--transition);
 }
 
-
 .project-card--featured:hover::after {
     transform: scale(1.35);
-
     opacity: 0.55;
 }
 
 
-/* Top */
+/* ==========================================================
+   Project Top
+   ========================================================== */
 
 .project-card__top {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     margin-bottom: 2rem;
 
     position: relative;
-
     z-index: 1;
 }
 
-
 .project-card__index {
     font-size: 0.7rem;
-
     font-weight: 600;
 
     color: var(--muted);
 }
 
-
 .project-card__type {
     padding: 0.35rem 0.7rem;
 
     border: 1px solid var(--border);
-
     border-radius: 999px;
 
     color: var(--muted);
@@ -597,19 +581,23 @@ h3 {
     font-size: 0.65rem;
 
     text-transform: uppercase;
-
     letter-spacing: 0.04em;
 }
 
 
-/* Content */
+/* ==========================================================
+   Project Content
+   ========================================================== */
 
 .project-card__content {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 
+    flex: 1;
+
+    position: relative;
     z-index: 1;
 }
-
 
 .project-card h3 {
     margin: 0 0 0.75rem;
@@ -617,36 +605,37 @@ h3 {
     font-size: 1.35rem;
 }
 
-
 .project-card p {
     max-width: 55ch;
 
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.3rem;
 
     color: var(--muted);
 
-    font-size: 0.88rem;
+    font-size: 0.9rem;
 
     line-height: 1.7;
 }
 
 
-/* Tags */
+/* ==========================================================
+   Project Tags
+   ========================================================== */
 
 .project-card__tags {
     display: flex;
-
     flex-wrap: wrap;
 
-    gap: 0.5rem;
-}
+    gap: 0.45rem;
 
+    margin-top: auto;
+    margin-bottom: 1.3rem;
+}
 
 .project-card__tags span {
     padding: 0.35rem 0.65rem;
 
     border: 1px solid var(--border);
-
     border-radius: 999px;
 
     color: var(--muted);
@@ -658,54 +647,110 @@ h3 {
         border-color var(--transition);
 }
 
-
 .project-card:hover .project-card__tags span {
     border-color: var(--primary);
-
     color: var(--primary);
 }
 
 
-/* Links */
+/* ==========================================================
+   Project Links
+   ========================================================== */
 
 .project-card__links {
     display: flex;
-
     align-items: center;
 
-    gap: 1.25rem;
+    gap: 1.2rem;
 
-    margin-top: auto;
-
-    padding-top: 1.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
 
     position: relative;
-
     z-index: 1;
 }
 
-
 .project-card__links a {
     color: var(--primary);
-
-    font-size: 0.8rem;
-
-    font-weight: 600;
 
     transition:
         transform var(--transition),
         opacity var(--transition);
 }
 
-
 .project-card__links a:hover {
     transform: translateX(3px);
-
     opacity: 0.7;
 }
 
 
-/* Responsive */
+/* ==========================================================
+   Experience Timeline
+   ========================================================== */
+
+.timeline {
+    max-width: 800px;
+
+    border-left: 2px solid var(--border);
+
+    padding-left: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.5rem;
+}
+
+.timeline__item {
+    position: relative;
+}
+
+.timeline__item::before {
+    content: '';
+
+    position: absolute;
+
+    left: -2.43rem;
+    top: 4px;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    box-shadow:
+        0 0 0 5px var(--accent);
+}
+
+.timeline__date {
+    color: var(--primary);
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    margin-bottom: 0.4rem;
+}
+
+.timeline__item h3 {
+    font-size: 1.05rem;
+
+    margin-bottom: 0.4rem;
+}
+
+.timeline__item p:last-child {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   Responsive
+   ========================================================== */
 
 @media (max-width: 760px) {
 
@@ -719,7 +764,6 @@ h3 {
 
 }
 
-
 @media (max-width: 640px) {
 
     .project-card {
@@ -728,41 +772,18 @@ h3 {
         padding: 1.4rem;
     }
 
-}
+    .project-card__top {
+        margin-bottom: 1.5rem;
+    }
 
-.project-card__content {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
+    .timeline {
+        padding-left: 1.5rem;
+    }
 
+    .timeline__item::before {
+        left: -1.93rem;
+    }
 
-.project-card p {
-    color: var(--muted);
-
-    font-size: 0.9rem;
-
-    margin-bottom: 1.3rem;
-}
-
-.project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 0.45rem;
-
-    margin-top: auto;
-
-    margin-bottom: 1.3rem;
-}
-
-.project-card__links {
-    display: flex;
-
-    gap: 1.2rem;
-
-    font-size: 0.82rem;
-    font-weight: 600;
 }
 .timeline {
     max-width: 800px;
